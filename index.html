@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KR3</title>
+    <link rel="stylesheet" href="css/style.css"> </head>
+
+<body>
+  <!-------- CONTROL PANEL --------->
+  <div id="firstPage">
+   <div id="panel">
+       <form name="text_family" id="text_family">
+       <input type="button" value="Edit" id="Edit">
+       <input type="button" value="B" id="Bold" style="font-weight:bold;">
+       <input type="button" value="I" id="Italic" style="font-style:italic;">
+       <input type="button" value="U" id="Underline" style="text-decoration:underline;">
+         
+           <select name="" id="textSize" onchange="changeSize()">
+               <option value="5">5px</option>
+               <option value="6">6px</option>
+               <option value="7">7px</option>
+               <option value="8">8px</option>
+               <option value="9">9px</option>
+               <option value="10">10px</option>
+               <option value="12">12px</option>
+               <option value="14">14px</option>
+               <option value="16">16px</option>
+               <option value="18">18px</option>
+               <option value="20">20px</option>
+               <option value="40">40px</option>
+           </select>
+           
+           <select name="" id="fontFamily" onchange="changeFamily()">
+               <option value="Conic Sans MS">Conic Sans MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Arial">Arial</option>
+               <option value="Helvetica">Helvetica</option>
+               <option value="Tahoma">Tahoma</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Florence">Florence</option>
+               <option value="Oldtown">Oldtown</option>
+               <option value="Blippo">Blippo</option>
+               <option value="Bookman">Bookman</option>
+               <option value="Fantasy">Fantasy</option>
+               <option value="Serif">Serif</option>
+           </select>
+           
+       <input type="button" value="Color" id="Color">
+       <input type="button" value="Background" id="Background">
+       
+       <input type="radio" name="align" value="Left" onchange="changeAlign(lf)">Left
+       <input type="radio" name="align" value="Center" onchange="changeAlign(cn)">Center
+       <input type="radio" name="align" value="Right" onchange="changeAlign(rg)">Right
+       
+       </form>
+   </div>
+   
+   <!-------- CONTROL PANEL --------->
+   
+   <!---- BODY WE CHANGE -->
+   <div id="bodyArea" contenteditable="true" class="area">
+       <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, consequuntur corporis quaerat cupiditate quas natus, minus quibusdam culpa dolor eum perspiciatis reiciendis unde quos accusamus provident eius? Harum, perferendis, inventore!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur molestiae ut quae doloremque rerum soluta, voluptatibus, neque dolore natus. Error id delectus rerum qui sit in architecto incidunt cumque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur molestias dicta laborum, aperiam eligendi id minima veritatis nulla tempore sed, veniam suscipit atque fuga modi perspiciatis commodi voluptate blanditiis. Sequi.</p>
+   </div>
+    <!---- BODY WE CHANGE -->
+    <!--- COLORS IMG BACKGROUND-->
+<div class="modal" id="modal">
+       <div class="modal-content" id='modal-content'>
+        <div id="tColor" class="t_color">
+                <div class="in_box" style="background: green"></div>
+                <div class="in_box" style="background: red"></div>
+                <div class="in_box" style="background: yellow"></div>
+                <div class="in_box" style="background: black"></div>
+                <div class="in_box" style="background: white"></div>
+                <div class="in_box" style="background: purple"></div>
+                <div class="in_box" style="background: blue"></div>
+                <div class="in_box" style="background: orange"></div>
+                <div class="in_box" style="background: aqua"></div>
+            </div>
+            </div>
+            </div>
+ 
+            <div class="modalSec" id="modalSec">
+       <div class="modal-contentSec" id='modal-contentSec'>
+        <div id="bColor" class="b_color">
+                <div class="in_boxSec" style="background: green"></div>
+                <div class="in_boxSec" style="background: red"></div>
+                <div class="in_boxSec" style="background: yellow"></div>
+                <div class="in_boxSec" style="background: black"></div>
+                <div class="in_boxSec" style="background: white"></div>
+                <div class="in_boxSec" style="background: purple"></div>
+                <div class="in_boxSec" style="background: blue"></div>
+                <div class="in_boxSec" style="background: orange"></div>
+                <div class="in_boxSec" style="background: aqua"></div>
+            </div>
+            <input type="button" value="Image" id="ImgBack">
+            </div>
+            </div>
+            
+            <div class="modalSecImg" id="modalSecImg">
+       <div class="modal-contentSecImg" id='modal-contentSecImg'>
+        <div id="bColorImg" class="b_colorImg">
+                <div class="in_boxTHh" style="background: url(img/1.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/2.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/3.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/4.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/5.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/6.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/7.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/8.jpg);background-size: cover"></div>
+                <div class="in_boxTHh" style="background: url(img/9.jpg);background-size: cover"></div>
+            </div>
+            <input type="button" value="Color" id="ColorBack">
+            <form method="post" enctype="multipart/form-data">
+            Завантажити файл:
+            <input type="file" name="ground">
+            <input type="submit" value="Завантажити">
+        </form>
+            </div>
+            </div>
+  </div>
+   
+    <!--- COLORS IMG BACKGROUND-->
+    <!-- BODY COLOR BACKGROUND -->
+    
+    
+    <!-- EDIT PAGE -->
+    <div id="allEditPafe">
+       <div id="panelEdit">
+        <input type="button" value="Save" id="Save">
+        <input type="button" value="Create Table" id="Table">
+        <input type="button" value="Create List" id="List">
+    </div>
+    
+    <div class="modalTable" id="modalTable">
+       <div class="modal-contentTable" id='modal-contentTable'>
+        <form name="createTeble" id="createTeble">
+            <label for="TRows">Кількість рядків</label><input type="text" name="row" value="" id="TRows">
+                <label for="TColumns">Кількість стовпці</label><input type="text" name="col" value="" id="TColumns"><br>
+                <label for="TWidth">Ширина комірки</label><input type="text" name="wtbl" value="" id="TWidth">
+                <label for="THeight">Bисота комірки</label><input type="text" name="htbl" value="" id="THeight"><br>
+                <label for="TLWidth">Товщина лінії</label><input type="text" name="htbl" value="" id="TLWidth">
+                <span>Тип лінії:</span>
+                <select name="" id="type_border">
+                    <option value="solid" selected>solid</option>
+                    <option value="double">double</option>
+                    <option value="ridge">ridge</option>
+                    <option value="dotted">dotted</option>
+                    <option value="none">none</option>
+                </select><br>
+                <span>Колір лінії:</span>
+                <select name="" id="color_border">
+                    <option value="red" selected>red</option>
+                    <option value="black">black</option>
+                    <option value="yellow">yellow</option>
+                    <option value="purple">purple</option>
+                </select>
+                <br>
+        </form>
+           <input type="button" value="Скинути" id="Reset">
+           <input type="button" value="Створити" id="TableOk">
+            </div>
+            </div>
+           
+           <div class="modalList" id="modalList">
+       <div class="modal-contentList" id='modal-contentList'>
+       <form name="oli">
+        <label for="NL">Кількість елементів нумерованого списку</label><input type="text" name="row" value="" id="NL"><br>
+        <p>Тип маркування списку:</p>
+                <select name="" id="type_li">
+                    <option value="1" selected>Цифри арабські</option>
+                    <option value="A">Букви великі</option>
+                    <option value="a">Букви малі</option>
+                    <option value="I">Римські цифри</option>
+                </select><br>
+        
+       </form>
+        
+           <input type="button" value="Скинути" id="ResetList">
+           <input type="button" value="Створити" id="ListOk">
+            </div>
+            </div>
+            
+            <textarea rows="40" cols="100" name="in_me" value="" id="editMode" class="editMode"></textarea>
+    </div>
+    <!-- EDIT PAGE -->
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
